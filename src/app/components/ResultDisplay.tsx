@@ -12,8 +12,7 @@ const scoreDetails = {
   gray: { label: 'Data Incomplete', Icon: Info, gradient: 'from-slate-500 to-slate-700', shadow: 'shadow-slate-500/50' }
 };
 
-// SDG 12 CHANGE: New helper for the detailed breakdown factors.
-// This gives specific icons and colors to each component of the sustainability score.
+
 const sdgScoreDetails = {
     good: { color: 'text-emerald-400', ring: 'ring-emerald-500/30' },
     average: { color: 'text-yellow-400', ring: 'ring-yellow-500/30' },
