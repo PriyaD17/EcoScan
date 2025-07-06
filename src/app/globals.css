@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer utilities {
+  .bg-radial-gradient { /* from landing page */
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
+  @keyframes scan-vertical { /* from landing page */
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(180px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+  }
+
+  .animate-scan-vertical { /* from landing page */
+    animation: scan-vertical 3s ease-in-out infinite;
+  }
+
+  /* --- ADD THESE NEW ANIMATIONS --- */
+
+  /* For the HUD corners */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px 0px rgba(52, 211, 153, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 30px 5px rgba(52, 211, 153, 0.7);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+  }
+
+  /* For the loading spinner */
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  .animate-spin-slow {
+      animation: spin 2s linear infinite;
+  }
+}
+
+body {
+  /* ... your existing body styles ... */
+  background: var(--background);
+  color: var(--foreground);
+}
