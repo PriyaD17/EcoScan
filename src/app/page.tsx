@@ -1,4 +1,4 @@
-// src/app/page.tsx
+
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -7,29 +7,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight, ScanLine, Leaf, ShieldCheck} from 'lucide-react';
 import { useRouter } from "next/navigation";
 
-// This is a conceptual placeholder for a dynamic, animated background.
-// In a real project, you might use a library like 'react-tsparticles' or a custom Three.js canvas.
+
 const AuroraBackground = () => (
   <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
     <div
       className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2
                  bg-radial-gradient from-emerald-950/50 to-slate-950"
     />
-    {/* Add particle effects or other animations here */}
   </div>
 );
 
-// This placeholder represents an animated phone mockup that feels alive.
-// You would build this with Framer Motion or a similar library.
+
 const AnimatedPhoneMockup = () => (
   <div className="relative w-80 h-[580px] bg-slate-800/80 backdrop-blur-xl border border-emerald-400/20 rounded-4xl shadow-2xl shadow-emerald-900/50">
     <div className="absolute inset-1.5 bg-slate-950 rounded-3xl overflow-hidden p-4 flex flex-col items-center">
        <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-            <h2 className="text-2xl font-bold text-emerald-400">GreenScan</h2>
-            <p className="text-slate-400 text-center">Revealing Eco-Truth</p>
+            <h2 className="text-2xl font-bold text-emerald-400">EcoScan</h2>
+            <p className="text-slate-400 text-center">Revealing the Eco-Truth</p>
             <div className="w-48 h-48 mt-4 relative">
                 <Leaf className="w-full h-full text-emerald-500/30"/>
-                {/* The glowing scanner line */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-emerald-400 shadow-[0_0_15px_2px_rgba(52,211,153,0.7)] animate-scan-vertical" />
             </div>
             <p className="mt-4 text-xs text-slate-500">Point at any barcode</p>
@@ -50,9 +46,6 @@ export default function LandingPage() {
     <div className="min-h-screen w-full bg-slate-950 text-slate-100 overflow-x-hidden">
       <AuroraBackground />
 
-      {/* ------------------------- */}
-      {/* ----- Navigation Bar ---- */}
-      {/* ------------------------- */}
       <header className="fixed top-0 left-0 w-full p-4 z-50">
         <nav className="container mx-auto flex justify-between items-center bg-slate-900/50 backdrop-blur-md border border-slate-700/50 rounded-xl p-2">
           <div className="flex items-center gap-2">
