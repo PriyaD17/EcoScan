@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 
 const AuroraBackground = () => (
-  <div className="absolute top-0 left-0 w-full h-full -z-10 bg-slate-950">
+  <div className="fixed top-0 left-0 w-full h-full -z-10 bg-slate-950">
     <div
       className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2
                  bg-radial-gradient from-emerald-950/50 to-slate-950"
