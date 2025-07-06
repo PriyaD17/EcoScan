@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import type { ProductInfo, SdgFactor } from '@/app/api/product-info/route'; 
-import { Leaf, TriangleAlert, ShieldX, Scan, Package, Globe, Award, Info, Search } from 'lucide-react';
+import { Leaf, TriangleAlert, ShieldX, Scan, Package, Globe, Award, Info } from 'lucide-react';
 
 const scoreDetails = {
   green: { label: 'Good Choice', Icon: Leaf, gradient: 'from-green-400 to-emerald-600', shadow: 'shadow-green-500/50' },
@@ -54,10 +54,7 @@ function SdgFactorDisplay({ factor, name, title }: { factor: SdgFactor, name: ke
 export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo; onScanAgain: () => void; }) {
   const details = scoreDetails[data.color];
 
-  const handleFindAlternatives = () => {
-    alert('Feature coming soon: Searching for more sustainable alternatives!');
-  };
-
+  
   return (
     <div className="w-full max-w-lg mx-auto bg-slate-900/50 backdrop-blur-xl border border-emerald-400/20 rounded-2xl shadow-2xl shadow-emerald-900/50 overflow-hidden animate-fade-in">
     
@@ -148,10 +145,6 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
                 <button onClick={onScanAgain} className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-emerald-500 text-slate-900 font-bold rounded-lg hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all transform hover:scale-105">
                     <Scan className="w-5 h-5"/>
                     Scan Another
-                </button>
-                <button onClick={handleFindAlternatives} className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-slate-700 text-slate-300 font-semibold rounded-lg hover:bg-slate-600 transition-colors">
-                    <Search className="w-5 h-5"/>
-                    Find Alternatives
                 </button>
             </div>
         </div>

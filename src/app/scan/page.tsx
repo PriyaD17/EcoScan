@@ -8,14 +8,12 @@ import { useDevices } from '@yudiel/react-qr-scanner';
 import type { ProductInfo } from '@/app/api/product-info/route';
 import { Leaf, TriangleAlert, Camera} from 'lucide-react';
 
-// A placeholder for the dynamic background from the landing page
 const AuroraBackground = () => (
   <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden bg-slate-950">
     <div className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 bg-radial-gradient from-emerald-950/30 to-slate-950" />
   </div>
 );
 
-// Our new futuristic loading indicator
 const LoadingIndicator = () => (
     <div className="flex flex-col items-center justify-center gap-4">
         <div className="w-16 h-16 border-4 border-emerald-400/20 border-t-emerald-400 rounded-full animate-spin-slow"></div>
@@ -23,7 +21,6 @@ const LoadingIndicator = () => (
     </div>
 );
 
-// The Main Scanner Page Component
 export default function ScanPage() {
   const [productData, setProductData] = useState<ProductInfo | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -98,10 +95,10 @@ export default function ScanPage() {
 
             {showScanner && (
                 <div className="w-full max-w-md flex flex-col items-center gap-6">
-                    {/* The Scanner HUD */}
+        
                     <div className="relative w-full aspect-square bg-slate-900/30 rounded-2xl overflow-hidden border border-emerald-400/20 shadow-2xl shadow-emerald-900/50">
                         <QRCodeScanner onDetected={handleDetected} deviceId={deviceId} />
-                        {/* HUD Overlay Elements */}
+          
                         <div className="absolute inset-0 pointer-events-none">
                             <div className="absolute top-4 left-4 w-12 h-12 border-t-4 border-l-4 border-emerald-400 rounded-tl-lg animate-pulse-glow" />
                             <div className="absolute top-4 right-4 w-12 h-12 border-t-4 border-r-4 border-emerald-400 rounded-tr-lg animate-pulse-glow" />
@@ -110,7 +107,7 @@ export default function ScanPage() {
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 border-2 border-emerald-400/20 rounded-full" />
                         </div>
                     </div>
-                    {/* Scanner Controls */}
+                
                     <div className="w-full p-3 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 rounded-xl flex items-center gap-4">
                         <Camera className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                         <select
