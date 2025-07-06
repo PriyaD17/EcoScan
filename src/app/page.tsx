@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -10,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 
 const AuroraBackground = () => (
-  <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+  <div className="fixed top-0 left-0 w-full h-full -z-10 bg-slate-950">
     <div
       className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2
                  bg-radial-gradient from-emerald-950/50 to-slate-950"
@@ -44,7 +42,7 @@ export default function LandingPage() {
   };
   
   return (
-    <div className="min-h-screen w-full bg-slate-950 text-slate-100 overflow-x-hidden">
+    <div className="min-h-screen w-full text-slate-100 overflow-x-hidden">
       <AuroraBackground />
 
       <header className="fixed top-0 left-0 w-full p-4 z-50">
