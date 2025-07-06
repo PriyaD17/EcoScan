@@ -1,11 +1,10 @@
-// src/app/components/ResultDisplay.tsx
+
 'use client';
 
 import Image from 'next/image';
 import type { ProductInfo, SdgFactor } from '@/app/api/product-info/route'; 
 import { Leaf, TriangleAlert, ShieldX, Scan, Package, Globe, Award, Info, Search } from 'lucide-react';
 
-// Main score banner details (kept for the top-level summary)
 const scoreDetails = {
   green: { label: 'Good Choice', Icon: Leaf, gradient: 'from-green-400 to-emerald-600', shadow: 'shadow-green-500/50' },
   yellow: { label: 'Could Be Better', Icon: TriangleAlert, gradient: 'from-yellow-400 to-amber-600', shadow: 'shadow-yellow-500/50' },
