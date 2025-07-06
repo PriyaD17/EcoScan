@@ -69,7 +69,7 @@ export default function ScanPage() {
             <nav className="container mx-auto flex justify-between items-center bg-slate-900/50 backdrop-blur-md border border-slate-700/50 rounded-xl p-2">
                 <div className="flex items-center gap-2">
                     <Leaf className="w-6 h-6 text-emerald-400" />
-                    <span className="text-xl font-bold">GreenScan</span>
+                    <span className="text-xl font-bold">EcoScan</span>
                 </div>
                 <p className="text-sm text-emerald-300">Live Analysis Mode</p>
             </nav>

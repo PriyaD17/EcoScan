@@ -5,7 +5,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-// SDG 12 CHANGE: New icons to represent the breakdown feature
 import { ArrowRight, Leaf, Package, Globe, Award } from 'lucide-react';
 import { useRouter } from "next/navigation";
 
@@ -71,7 +70,6 @@ export default function LandingPage() {
               The Story is in the Barcode.
             </h1>
             <p className="text-lg md:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0">
-              {/* SDG 12 CHANGE: Updated tagline to reflect deeper insights */}
               Go beyond a simple score. Uncover the real-world impact of any product—from its packaging to its origins—with a single, powerful scan.
             </p>
             <div className="flex gap-4 justify-center lg:justify-start pt-4">
@@ -95,7 +93,6 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">One Scan. Total Clarity.</h2>
             <p className="mt-4 text-lg text-slate-400">We translate complex data into a simple, actionable report.</p>
           </div>
-          {/* SDG 12 CHANGE: The feature cards are now updated to reflect the new core features. */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-slate-900/50 border-emerald-400/20 shadow-2xl shadow-emerald-900/30 hover:border-emerald-400/50 transition-colors">
               <CardHeader className="flex flex-row items-center gap-4">
