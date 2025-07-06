@@ -93,8 +93,7 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
                 <p className="text-lg text-slate-400">{data.brand}</p>
             </div>
             
-            {/* SDG 12 CHANGE: This is the core new section. */}
-            {/* We now show a detailed breakdown of the factors affecting the score. */}
+            
             <div>
                 <h3 className="text-lg font-semibold text-emerald-300 mb-3">Sustainability Breakdown</h3>
                 <div className="space-y-3">
