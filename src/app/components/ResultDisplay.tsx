@@ -111,7 +111,7 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
                 </div>
             </div>
 
-            {/* SDG 12 CHANGE: Turn missing data into an educational opportunity and a call to action. */}
+           
             {data.color === 'gray' && (
                 <div className="p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg text-center">
                     <h3 className="font-bold text-blue-300">Help Improve Transparency!</h3>
@@ -124,7 +124,6 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
                 </div>
             )}
 
-            {/* Nutrition & Allergens are still important for a holistic view */}
             {data.nutrientLevels && (
               <div>
                 <h3 className="text-lg font-semibold text-emerald-300">Health Snapshot</h3>
@@ -145,7 +144,6 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
                 </div>
             )}
 
-            {/* SDG 12 CHANGE: The action buttons are now more aligned with consumer empowerment. */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-slate-700/50">
                 <button onClick={onScanAgain} className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-emerald-500 text-slate-900 font-bold rounded-lg hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all transform hover:scale-105">
                     <Scan className="w-5 h-5"/>
