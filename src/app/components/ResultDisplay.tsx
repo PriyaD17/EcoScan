@@ -34,8 +34,7 @@ const nutrientLevelClasses = {
 
 const capitalize = (s: string) => s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
 
-// SDG 12 CHANGE: A new sub-component to display each sustainability factor.
-// This makes the main component cleaner and promotes reusability.
+
 function SdgFactorDisplay({ factor, name, title }: { factor: SdgFactor, name: keyof typeof factorIcons, title: string }) {
     const details = sdgScoreDetails[factor.score];
     const Icon = factorIcons[name];
@@ -56,13 +55,12 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
   const details = scoreDetails[data.color];
 
   const handleFindAlternatives = () => {
-    // In a real app, this would trigger a search or navigate to a new page
     alert('Feature coming soon: Searching for more sustainable alternatives!');
   };
 
   return (
     <div className="w-full max-w-lg mx-auto bg-slate-900/50 backdrop-blur-xl border border-emerald-400/20 rounded-2xl shadow-2xl shadow-emerald-900/50 overflow-hidden animate-fade-in">
-        {/* The summary banner remains, but its language is more nuanced */}
+    
         <div className={`relative p-6 text-white bg-gradient-to-br ${details.gradient} shadow-lg ${details.shadow}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
@@ -80,7 +78,7 @@ export default function ResultDisplay({ data, onScanAgain }: { data: ProductInfo
 
         <div className="p-6 space-y-6">
             
-            {/* Product Header remains the same */}
+          
             <div className="text-center">
                 {data.imageUrl && (
                     <Image
