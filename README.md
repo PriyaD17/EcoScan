@@ -12,7 +12,7 @@
 
 ## 🚀 Live Demo
 
-**[your-project-url.vercel.app](https://eco-scan-sand.vercel.app/)**
+**[Link](https://eco-scan-sand.vercel.app/)**
 
 
 ## 🎯 The Problem
