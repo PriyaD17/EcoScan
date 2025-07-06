@@ -1,95 +1,72 @@
-# 🌿 GreenScan
 
+# 🌿 EcoScan
 
-Instantly decode the environmental and nutritional impact of any product with a single, powerful scan. GreenScan bridges the gap between consumer curiosity and transparent product data, wrapped in an elegant, futuristic interface.
+![SDG 12](https://img.shields.io/badge/SDG-12-00A99D?style=for-the-badge&logo=sustainable-development-goals)
+![Tech Stack](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Styling](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Deployment](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-### ✨ Live Demo
-
-**https://green-scan-kappa.vercel.app/**
-
----
-
-<p align="center">
-  <img src="https://storage.googleapis.com/agent-tools-public-content/greenscan-result.png" alt="GreenScan Result Card" width="450">
-</p>
+**See the true story behind the barcode. Go beyond a simple score and uncover the real-world impact of any product—from its packaging to its origins—with a single, powerful scan.**
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
 
-*   **Real-time Barcode & QR Scanning:** Uses your device's camera to create a futuristic "Heads-Up Display" for instant code detection.
-*   **Powerful Data Integration:** Fetches comprehensive product data from the global [Open Food Facts](https://openfoodfacts.org/) database.
-*   **Color-Coded Eco-Score:** Translates the official `ecoscore_grade` into a clear, color-coded rating: **Sustainable (Green)**, **Partially Sustainable (Yellow)**, or **Not Sustainable (Red)**.
-*   **Bombastic & Elegant UI:** A custom-designed "Digital Aurora" theme built with ShadCN UI, featuring glassmorphism, glowing accents, and fluid animations.
-*   **Detailed Product Card:** Displays a wealth of information including product image, brand, quantity, ingredients, allergens, and nutritional levels.
-*   **Advanced Scanner Controls:** Allows users to switch between available camera devices on the fly.
-*   **Copy to Clipboard:** Easily copy the scanned barcode with a single click.
+**[your-project-url.vercel.app](https://eco-scan-sand.vercel.app/)**
 
-## 🛠️ Technology Stack
 
-| Technology      | Description                                          |
-| --------------- | ---------------------------------------------------- |
-| **Next.js 14**  | App Router, Server Actions, API Routes.              |
-| **React**       | Core UI library.                                     |
-| **TypeScript**  | For robust, type-safe code.                          |
-| **Tailwind CSS**| Utility-first CSS for rapid, custom styling.         |
-| **ShadCN/UI**   | Beautiful, accessible, and unstyled UI components.   |
-| **Lucide React**| For clean and elegant icons.                         |
-| **@yudiel/react-qr-scanner** | The powerful engine for camera-based barcode detection. |
+## 🎯 The Problem
 
-## ⚙️ How It Works
+In today's world, consumers want to make sustainable choices, but they face a significant **information gap**. Product labels are often vague or misleading ("greenwashing"), and even official ratings like an "Eco-Score" don't explain the *why* behind the grade. This lack of transparency makes it nearly impossible for the average person to practice responsible consumption, directly hindering the progress of **UN Sustainable Development Goal 12**.
 
-GreenScan is built on a modern, decoupled architecture that ensures security and performance.
+## ✨ Our Solution
 
-1.  **Frontend (Scanner):** The user scans a barcode using the React component on the `/scan` page.
-2.  **Internal API Call:** The scanned code is sent via a `POST` request to our own backend API route (`/api/product-info`).
-3.  **Backend API Route:** This secure, server-side route receives the barcode. It then makes a server-to-server call to the Open Food Facts API.
-4.  **Data Processing:** The backend processes the massive JSON response from Open Food Facts, extracting only the essential data (name, brand, images, eco-score, etc.) and applying our custom sustainability logic.
-5.  **Clean Response:** The backend sends a small, clean, and typed `ProductInfo` object back to the frontend.
-6.  **UI Rendering:** The frontend receives the processed data and renders the beautiful, dynamic `ResultDisplay` component.
+**EcoScan** is a mobile-first web application that bridges this gap. By scanning a product's barcode, users get an immediate, easy-to-understand, and actionable sustainability report.
 
-This prevents exposing any external API logic to the client and allows us to create a clean, purpose-built data structure for our UI.
+Instead of just a single score, we provide a detailed **Sustainability Breakdown** across three key pillars:
 
-## 🏁 Getting Started
+1.  **📦 Packaging Analysis:** Is the packaging recyclable? Is it made from problematic materials like plastic?
+2.  **🌍 Ingredient Origins:** Are the ingredients sourced locally, or do they have a large transportation footprint? Is the origin known at all?
+3.  **🏆 Production Method:** Does the product carry meaningful certifications like Organic or Fair Trade that ensure ethical and sustainable practices?
 
-Follow these steps to get a local copy of GreenScan up and running.
+EcoScan empowers consumers to make informed decisions at the exact moment they are needed most—in the store aisle.
 
-### Prerequisites
+## 🌟 Key Features
 
-*   Node.js (v18.17 or later)
-*   npm or yarn
+*   **Barcode Scanning:** A simple interface to begin the product analysis (simulated in the current version).
+*   **Holistic Sustainability Report:** An overall score combined with a detailed breakdown of environmental factors.
+*   **Health & Allergen Snapshot:** Provides crucial nutritional levels and allergen alerts for a complete product view.
+*   **Transparency Call-to-Action:** If data is missing, we encourage users to contribute to the open-source community via a direct link to the Open Food Facts product page.
+*   **Fully Responsive Design:** A beautiful and seamless experience on both mobile and desktop devices.
 
-### Installation
+## 🛠️ Tech Stack
+
+*   **Framework:** **Next.js 14** (App Router)
+*   **Language:** **TypeScript**
+*   **Styling:** **Tailwind CSS**
+*   **UI Components:** **Shadcn/UI**
+*   **Icons:** **Lucide React**
+*   **Primary Data Source:** **[Open Food Facts API](https://world.openfoodfacts.org/api/v2/)**
+*   **Deployment:** **Vercel**
+
+## 🔧 Getting Started (Local Setup)
+
+To run this project on your local machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/greenscan.git
-    cd greenscan
+    git clone https://github.com/your-username/ecoscan.git
     ```
 
-2.  **Install dependencies:**
+2.  **Navigate to the project directory:**
+    ```bash
+    cd ecoscan
+    ```
+
+3.  **Install dependencies:**
     ```bash
     npm install
-    ```
-
-3.  **Configure Next.js for External Images:**
-    The project needs to trust the Open Food Facts image domain. Ensure your `next.config.mjs` file includes the following:
-    ```javascript
-    /** @type {import('next').NextConfig} */
-    const nextConfig = {
-      images: {
-        remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 'images.openfoodfacts.org',
-            port: '',
-            pathname: '/images/products/**',
-          },
-        ],
-      },
-    };
-
-    export default nextConfig;
+    # or yarn install, or pnpm install
     ```
 
 4.  **Run the development server:**
@@ -97,49 +74,8 @@ Follow these steps to get a local copy of GreenScan up and running.
     npm run dev
     ```
 
-5.  **Open the app:**
-    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+5.  **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
 
-    > **Note:** Camera access requires a secure context. `localhost` is considered secure. If accessing from a different device on your network, you may need to set up an HTTPS tunnel (e.g., using `ngrok`). Your browser will ask for camera permission on the first visit to the `/scan` page—please allow it.
+## 🙏 Acknowledgments
 
-## 📂 Project Structure
-
-Here is a brief overview of the key files in the project:
-
-```
-src/
-├── app/
-│   ├── api/product-info/route.ts  # The powerful backend logic and data processor.
-│   ├── components/
-│   │   ├── ResultDisplay.tsx     # The bombastic and elegant result card UI.
-│   │   └── scanner.tsx           # The wrapper for the @yudiel/react-qr-scanner component.
-│   ├── scan/page.tsx             # The main scanning page, orchestrating the UI state (scan, load, result).
-│   └── page.tsx                  # The "Digital Aurora" landing page.
-├── components/ui/                  # Auto-generated by ShadCN for UI primitives.
-└── lib/utils.ts                    # Auto-generated by ShadCN.
-```
-
-## 🗺️ Future Roadmap
-
-GreenScan is a living project with an ambitious future. Potential next steps include:
-
-*   **User Accounts & Scan History:** Allow users to sign up and keep a history of their scanned products.
-*   **Personalized Insights:** Provide personalized sustainability reports based on a user's scan history.
-*   **Product Alternatives:** Suggest more sustainable alternatives to poorly rated products.
-*   **Deeper Data Analysis:** Incorporate more data points like packaging materials and supply chain origins.
-
-## ❤️ Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
-## ⚖️ License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+This project would not be possible without the incredible open-source community behind **[Open Food Facts](https://world.openfoodfacts.org/)**. Thank you for providing the data that powers our mission for a more transparent world.
